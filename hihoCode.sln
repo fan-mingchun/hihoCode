@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spfa1", "spfa1\spfa1.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testStlMemDelete", "testStlMemDelete\testStlMemDelete.vcxproj", "{1041BE70-58EB-4391-874C-3C3C96629EF0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1232", "1232\1232.vcxproj", "{22BC85E8-C11B-46BB-83BC-2B7FDC4228F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +45,10 @@ Global
 		{1041BE70-58EB-4391-874C-3C3C96629EF0}.Debug|Win32.Build.0 = Debug|Win32
 		{1041BE70-58EB-4391-874C-3C3C96629EF0}.Release|Win32.ActiveCfg = Release|Win32
 		{1041BE70-58EB-4391-874C-3C3C96629EF0}.Release|Win32.Build.0 = Release|Win32
+		{22BC85E8-C11B-46BB-83BC-2B7FDC4228F9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{22BC85E8-C11B-46BB-83BC-2B7FDC4228F9}.Debug|Win32.Build.0 = Debug|Win32
+		{22BC85E8-C11B-46BB-83BC-2B7FDC4228F9}.Release|Win32.ActiveCfg = Release|Win32
+		{22BC85E8-C11B-46BB-83BC-2B7FDC4228F9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
