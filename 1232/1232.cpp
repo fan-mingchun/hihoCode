@@ -20,39 +20,42 @@ int main()
 	int	N,M;
 	while (scanf("%d",&N) && N !=0)
 	{
-		memset((char*)adjacMatrix,0,max_node_num*max_node_num);
+		//memset((char*)adjacMatrix,0,max_node_num*max_node_num);
 		unionInit(N);
 		scanf("%d",&M);
 		int num = M;
 		int one,two;
-		int total = N;
+		int total = N-1;
 		while (num--)
 		{
 			scanf("%d%d",&one,&two);
-			adjacMatrix[one][two]=1;
-			adjacMatrix[two][one]=1;
-		}
-		for(int i = 1;i <= N;++i)
-		{
-			/*if(i != unionFindSet[i])
-				continue;*/
-			for(int j = i+1;j <=N;++j)
+			if(find(one) != find(two))
 			{
-				if(adjacMatrix[i][j])
-					union1(i,j);
+				total--;
+				union1(one,two);
 			}
 		}
-		int cur = 1;
-		int result = 0;
-		for(int i = 1;i <= N;++i)
-		{
-			if(find(i)==i)
-			{
-				result++;
-				
-			}
-		}	
-		printf("%d\n",result-1);
+		//for(int i = 1;i <= N;++i)
+		//{
+		//	/*if(i != unionFindSet[i])
+		//		continue;*/
+		//	for(int j = i+1;j <=N;++j)
+		//	{
+		//		if(adjacMatrix[i][j])
+		//			union1(i,j);
+		//	}
+		//}
+		//int cur = 1;
+		//int result = 0;
+		//for(int i = 1;i <= N;++i)
+		//{
+		//	if(find(i)==i)
+		//	{
+		//		result++;
+		//		
+		//	}
+		//}	
+		printf("%d\n",total);
 	}	
 	return 0;
 }
@@ -70,13 +73,28 @@ void union1(int first,int second)
 	
 }
 
-int find(int p)
+//int find(int p)
+//{
+//	int temp = p;
+//	while (p != unionFindSet[p])
+//	{
+//		p = unionFindSet[p];
+//	}
+//	//unionFindSet[temp] = p;
+//	return p;
+//}
+
+int find(int x)
 {
-	int temp = p;
-	while (p != unionFindSet[p])
-	{
-		p = unionFindSet[p];
-	}
-	//unionFindSet[temp] = p;
-	return p;
+    int r=x;
+   while (unionFindSet[r ]!=r)
+   r=unionFindSet[r ];
+   int i=x; int j;
+   while(i!=r)
+   {
+       j=unionFindSet[i ];
+       unionFindSet[i ]=r;
+       i=j;
+   }
+   return r;
 }
